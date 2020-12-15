@@ -16,7 +16,7 @@ def match_root(subject):
             # State 2303
             subst2 = Substitution(subst1)
             try:
-                subst2.try_add_variable('i2.2', S(0))
+                subst2.try_add_variable('i2.2', S(1))
             except ValueError:
                 pass
             else:
@@ -83,7 +83,7 @@ def match_root(subject):
                                 # State 2309
                                 subst3 = Substitution(subst2)
                                 try:
-                                    subst3.try_add_variable('i2.2', 0)
+                                    subst3.try_add_variable('i2.2', 1)
                                 except ValueError:
                                     pass
                                 else:
@@ -185,7 +185,7 @@ def match_root(subject):
                     pass
                 else:
                     pass
-                    if 'i2.0_1' not in subst2 or 'i2.0' not in subst2 or cons_f3(b=subst2["i2.0_1"], x=subst2["i2.0"]):
+                    if 'i2.0' not in subst2 or 'i2.0_1' not in subst2 or cons_f3(b=subst2["i2.0_1"], x=subst2["i2.0"]):
                         pass
                         # State 2326
                         if len(subjects2) >= 1:
@@ -197,7 +197,7 @@ def match_root(subject):
                                 pass
                             else:
                                 pass
-                                if 'i2.0_1' not in subst3 or 'i2.0' not in subst3 or cons_f3(b=subst3["i2.0_1"], x=subst3["i2.0"]):
+                                if 'i2.0' not in subst3 or 'i2.0_1' not in subst3 or cons_f3(b=subst3["i2.0_1"], x=subst3["i2.0"]):
                                     pass
                                     # State 2327
                                     if len(subjects2) == 0:
@@ -272,7 +272,7 @@ def match_root(subject):
                                     subjects2.extendleft(reversed(tmp28))
                 if pattern_index == 1:
                     pass
-                    if 'i2.0_1' not in subst1 or 'i2.0' not in subst1 or cons_f3(b=subst1["i2.0_1"], x=subst1["i2.0"]):
+                    if 'i2.0' not in subst1 or 'i2.0_1' not in subst1 or cons_f3(b=subst1["i2.0_1"], x=subst1["i2.0"]):
                         pass
                         # State 2329
                         if len(subjects2) >= 1:
@@ -292,7 +292,7 @@ def match_root(subject):
                                     pass
                                 else:
                                     pass
-                                    if 'i2.0_1' not in subst2 or 'i2.0' not in subst2 or cons_f3(b=subst2["i2.0_1"], x=subst2["i2.0"]):
+                                    if 'i2.0' not in subst2 or 'i2.0_1' not in subst2 or cons_f3(b=subst2["i2.0_1"], x=subst2["i2.0"]):
                                         pass
                                         # State 2330
                                         if len(subjects2) == 0:

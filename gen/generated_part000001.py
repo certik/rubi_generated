@@ -44,7 +44,7 @@ class CommutativeMatcher2315(CommutativeMatcher):
         # State 2314
         subst1 = Substitution(subst0)
         try:
-            subst1.try_add_variable('i2.2', S(0))
+            subst1.try_add_variable('i2.2', S(1))
         except ValueError:
             pass
         else:
@@ -89,7 +89,7 @@ class CommutativeMatcher2315(CommutativeMatcher):
                             # State 2319
                             subst2 = Substitution(subst1)
                             try:
-                                subst2.try_add_variable('i2.2', 0)
+                                subst2.try_add_variable('i2.2', 1)
                             except ValueError:
                                 pass
                             else:

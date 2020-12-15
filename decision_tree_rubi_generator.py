@@ -1,5 +1,6 @@
 from datetime import datetime
 import sys
+import shutil
 
 from sympy.integrals.rubi.rubimain import get_rubi_object
 
@@ -258,6 +259,7 @@ def generate_code():
     print("done")
 
     tempdir = "gen"
+    shutil.rmtree(tempdir)
     os.mkdir(tempdir)
     os.system(os.path.join(tempdir, "__init__.py"))
     tempfile = "{0}/generated_part{{0:06}}.py".format(tempdir)
