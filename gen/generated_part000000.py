@@ -31,9 +31,9 @@ def match_root(subject):
                         pass
                     else:
                         pass
-                        if 'i2.1' not in subst3 or 'i2.2' not in subst3 or cons_f4(n=subst3["i2.2"], x=subst3["i2.1"]):
+                        if 'i2.2' not in subst3 or 'i2.1' not in subst3 or cons_f4(n=subst3["i2.2"], x=subst3["i2.1"]):
                             pass
-                            if 'i2.1' not in subst3 or 'i2.0' not in subst3 or cons_f3(b=subst3["i2.0"], x=subst3["i2.1"]):
+                            if 'i2.0' not in subst3 or 'i2.1' not in subst3 or cons_f3(b=subst3["i2.0"], x=subst3["i2.1"]):
                                 pass
                                 # State 2305
                                 if len(subjects2) >= 1:
@@ -45,9 +45,9 @@ def match_root(subject):
                                         pass
                                     else:
                                         pass
-                                        if 'i2.1' not in subst4 or 'i2.2' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
+                                        if 'i2.2' not in subst4 or 'i2.1' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
                                             pass
-                                            if 'i2.1' not in subst4 or 'i2.0' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
+                                            if 'i2.0' not in subst4 or 'i2.1' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
                                                 pass
                                                 # State 2306
                                                 if len(subjects2) == 0:
@@ -76,9 +76,9 @@ def match_root(subject):
                         pass
                     else:
                         pass
-                        if 'i2.1' not in subst2 or 'i2.2' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
+                        if 'i2.2' not in subst2 or 'i2.1' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
                             pass
-                            if 'i2.1' not in subst2 or 'i2.0' not in subst2 or cons_f3(b=subst2["i2.0"], x=subst2["i2.1"]):
+                            if 'i2.0' not in subst2 or 'i2.1' not in subst2 or cons_f3(b=subst2["i2.0"], x=subst2["i2.1"]):
                                 pass
                                 # State 2309
                                 subst3 = Substitution(subst2)
@@ -88,7 +88,7 @@ def match_root(subject):
                                     pass
                                 else:
                                     pass
-                                    if 'i2.1' not in subst3 or 'i2.2' not in subst3 or cons_f4(n=subst3["i2.2"], x=subst3["i2.1"]):
+                                    if 'i2.2' not in subst3 or 'i2.1' not in subst3 or cons_f4(n=subst3["i2.2"], x=subst3["i2.1"]):
                                         pass
                                         if 'i2.2' not in subst3 or cons_a1(n=subst3["i2.2"]):
                                             pass
@@ -105,9 +105,9 @@ def match_root(subject):
                                                         pass
                                                     else:
                                                         pass
-                                                        if 'i2.1' not in subst4 or 'i2.2' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
+                                                        if 'i2.2' not in subst4 or 'i2.1' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
                                                             pass
-                                                            if 'i2.1' not in subst4 or 'i2.0' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
+                                                            if 'i2.0' not in subst4 or 'i2.1' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
                                                                 pass
                                                                 # State 2312
                                                                 if len(subjects2) == 0:
@@ -131,7 +131,7 @@ def match_root(subject):
                                         pass
                                     else:
                                         pass
-                                        if 'i2.1' not in subst3 or 'i2.2' not in subst3 or cons_f4(n=subst3["i2.2"], x=subst3["i2.1"]):
+                                        if 'i2.2' not in subst3 or 'i2.1' not in subst3 or cons_f4(n=subst3["i2.2"], x=subst3["i2.1"]):
                                             pass
                                             if 'i2.2' not in subst3 or cons_a1(n=subst3["i2.2"]):
                                                 pass
@@ -148,9 +148,9 @@ def match_root(subject):
                                                             pass
                                                         else:
                                                             pass
-                                                            if 'i2.1' not in subst4 or 'i2.2' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
+                                                            if 'i2.2' not in subst4 or 'i2.1' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
                                                                 pass
-                                                                if 'i2.1' not in subst4 or 'i2.0' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
+                                                                if 'i2.0' not in subst4 or 'i2.1' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
                                                                     pass
                                                                     # State 2312
                                                                     if len(subjects2) == 0:
@@ -226,9 +226,9 @@ def match_root(subject):
                 pass
                 if pattern_index == 0:
                     pass
-                    if 'i2.1' not in subst1 or 'i2.2' not in subst1 or cons_f4(n=subst1["i2.2"], x=subst1["i2.1"]):
+                    if 'i2.2' not in subst1 or 'i2.1' not in subst1 or cons_f4(n=subst1["i2.2"], x=subst1["i2.1"]):
                         pass
-                        if 'i2.1' not in subst1 or 'i2.0' not in subst1 or cons_f3(b=subst1["i2.0"], x=subst1["i2.1"]):
+                        if 'i2.0' not in subst1 or 'i2.1' not in subst1 or cons_f3(b=subst1["i2.0"], x=subst1["i2.1"]):
                             pass
                             if 'i2.2' not in subst1 or cons_a1(n=subst1["i2.2"]):
                                 pass
@@ -250,9 +250,9 @@ def match_root(subject):
                                             pass
                                         else:
                                             pass
-                                            if 'i2.1' not in subst2 or 'i2.2' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
+                                            if 'i2.2' not in subst2 or 'i2.1' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
                                                 pass
-                                                if 'i2.1' not in subst2 or 'i2.0' not in subst2 or cons_f3(b=subst2["i2.0"], x=subst2["i2.1"]):
+                                                if 'i2.0' not in subst2 or 'i2.1' not in subst2 or cons_f3(b=subst2["i2.0"], x=subst2["i2.1"]):
                                                     pass
                                                     # State 2323
                                                     if len(subjects2) == 0:
