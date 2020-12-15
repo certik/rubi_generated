@@ -31,9 +31,9 @@ def match_root(subject):
                         pass
                     else:
                         pass
-                        if 'i2.2' not in subst3 or 'i2.1' not in subst3 or cons_f4(n=subst3["i2.2"], x=subst3["i2.1"]):
+                        if 'i2.1' not in subst3 or 'i2.2' not in subst3 or cons_f4(n=subst3["i2.2"], x=subst3["i2.1"]):
                             pass
-                            if 'i2.0' not in subst3 or 'i2.1' not in subst3 or cons_f3(b=subst3["i2.0"], x=subst3["i2.1"]):
+                            if 'i2.1' not in subst3 or 'i2.0' not in subst3 or cons_f3(b=subst3["i2.0"], x=subst3["i2.1"]):
                                 pass
                                 # State 2305
                                 if len(subjects2) >= 1:
@@ -45,9 +45,9 @@ def match_root(subject):
                                         pass
                                     else:
                                         pass
-                                        if 'i2.2' not in subst4 or 'i2.1' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
+                                        if 'i2.1' not in subst4 or 'i2.2' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
                                             pass
-                                            if 'i2.0' not in subst4 or 'i2.1' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
+                                            if 'i2.1' not in subst4 or 'i2.0' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
                                                 pass
                                                 # State 2306
                                                 if len(subjects2) == 0:
@@ -61,6 +61,12 @@ def match_root(subject):
                                                         tmp_subst['b'] = subst4['i2.0']
                                                         # 0: Integral(b*x**n, x) /; (cons_f4) and (cons_f3) and (cons_a1)
                                                         yield replacement1, tmp_subst, [(cons_f4), (cons_f3), (cons_a1)]
+                                                        tmp_subst = Substitution()
+                                                        tmp_subst['x'] = subst4['i2.1']
+                                                        tmp_subst['n'] = subst4['i2.2']
+                                                        tmp_subst['b'] = subst4['i2.0']
+                                                        # 1: Integral(b*x**n, x) /; (cons_f4) and (cons_f3) and (cons_a2)
+                                                        yield replacement2, tmp_subst, [(cons_f4), (cons_f3), (cons_a2)]
                                     subjects2.appendleft(tmp7)
                     subjects2.appendleft(tmp5)
             if len(subjects2) >= 1 and isinstance(subjects2[0], Pow):
@@ -76,9 +82,9 @@ def match_root(subject):
                         pass
                     else:
                         pass
-                        if 'i2.2' not in subst2 or 'i2.1' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
+                        if 'i2.1' not in subst2 or 'i2.2' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
                             pass
-                            if 'i2.0' not in subst2 or 'i2.1' not in subst2 or cons_f3(b=subst2["i2.0"], x=subst2["i2.1"]):
+                            if 'i2.1' not in subst2 or 'i2.0' not in subst2 or cons_f3(b=subst2["i2.0"], x=subst2["i2.1"]):
                                 pass
                                 # State 2309
                                 subst3 = Substitution(subst2)
@@ -88,7 +94,7 @@ def match_root(subject):
                                     pass
                                 else:
                                     pass
-                                    if 'i2.2' not in subst3 or 'i2.1' not in subst3 or cons_f4(n=subst3["i2.2"], x=subst3["i2.1"]):
+                                    if 'i2.1' not in subst3 or 'i2.2' not in subst3 or cons_f4(n=subst3["i2.2"], x=subst3["i2.1"]):
                                         pass
                                         if 'i2.2' not in subst3 or cons_a1(n=subst3["i2.2"]):
                                             pass
@@ -105,9 +111,9 @@ def match_root(subject):
                                                         pass
                                                     else:
                                                         pass
-                                                        if 'i2.2' not in subst4 or 'i2.1' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
+                                                        if 'i2.1' not in subst4 or 'i2.2' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
                                                             pass
-                                                            if 'i2.0' not in subst4 or 'i2.1' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
+                                                            if 'i2.1' not in subst4 or 'i2.0' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
                                                                 pass
                                                                 # State 2312
                                                                 if len(subjects2) == 0:
@@ -122,16 +128,48 @@ def match_root(subject):
                                                                         # 0: Integral(b*x**n, x) /; (cons_f4) and (cons_f3) and (cons_a1)
                                                                         yield replacement1, tmp_subst, [(cons_f4), (cons_f3), (cons_a1)]
                                                     subjects2.appendleft(tmp14)
+                                        if 'i2.2' not in subst3 or cons_a2(n=subst3["i2.2"]):
+                                            pass
+                                            # State 2310
+                                            if len(subjects10) == 0:
+                                                pass
+                                                # State 2311
+                                                if len(subjects2) >= 1:
+                                                    tmp16 = subjects2.popleft()
+                                                    subst4 = Substitution(subst3)
+                                                    try:
+                                                        subst4.try_add_variable('i2.1', tmp16)
+                                                    except ValueError:
+                                                        pass
+                                                    else:
+                                                        pass
+                                                        if 'i2.1' not in subst4 or 'i2.2' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
+                                                            pass
+                                                            if 'i2.1' not in subst4 or 'i2.0' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
+                                                                pass
+                                                                # State 2312
+                                                                if len(subjects2) == 0:
+                                                                    pass
+                                                                    # State 2313
+                                                                    if len(subjects) == 0:
+                                                                        pass
+                                                                        tmp_subst = Substitution()
+                                                                        tmp_subst['x'] = subst4['i2.1']
+                                                                        tmp_subst['n'] = subst4['i2.2']
+                                                                        tmp_subst['b'] = subst4['i2.0']
+                                                                        # 1: Integral(b*x**n, x) /; (cons_f4) and (cons_f3) and (cons_a2)
+                                                                        yield replacement2, tmp_subst, [(cons_f4), (cons_f3), (cons_a2)]
+                                                    subjects2.appendleft(tmp16)
                                 if len(subjects10) >= 1:
-                                    tmp16 = subjects10.popleft()
+                                    tmp18 = subjects10.popleft()
                                     subst3 = Substitution(subst2)
                                     try:
-                                        subst3.try_add_variable('i2.2', tmp16)
+                                        subst3.try_add_variable('i2.2', tmp18)
                                     except ValueError:
                                         pass
                                     else:
                                         pass
-                                        if 'i2.2' not in subst3 or 'i2.1' not in subst3 or cons_f4(n=subst3["i2.2"], x=subst3["i2.1"]):
+                                        if 'i2.1' not in subst3 or 'i2.2' not in subst3 or cons_f4(n=subst3["i2.2"], x=subst3["i2.1"]):
                                             pass
                                             if 'i2.2' not in subst3 or cons_a1(n=subst3["i2.2"]):
                                                 pass
@@ -140,17 +178,17 @@ def match_root(subject):
                                                     pass
                                                     # State 2311
                                                     if len(subjects2) >= 1:
-                                                        tmp18 = subjects2.popleft()
+                                                        tmp20 = subjects2.popleft()
                                                         subst4 = Substitution(subst3)
                                                         try:
-                                                            subst4.try_add_variable('i2.1', tmp18)
+                                                            subst4.try_add_variable('i2.1', tmp20)
                                                         except ValueError:
                                                             pass
                                                         else:
                                                             pass
-                                                            if 'i2.2' not in subst4 or 'i2.1' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
+                                                            if 'i2.1' not in subst4 or 'i2.2' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
                                                                 pass
-                                                                if 'i2.0' not in subst4 or 'i2.1' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
+                                                                if 'i2.1' not in subst4 or 'i2.0' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
                                                                     pass
                                                                     # State 2312
                                                                     if len(subjects2) == 0:
@@ -164,8 +202,40 @@ def match_root(subject):
                                                                             tmp_subst['b'] = subst4['i2.0']
                                                                             # 0: Integral(b*x**n, x) /; (cons_f4) and (cons_f3) and (cons_a1)
                                                                             yield replacement1, tmp_subst, [(cons_f4), (cons_f3), (cons_a1)]
-                                                        subjects2.appendleft(tmp18)
-                                    subjects10.appendleft(tmp16)
+                                                        subjects2.appendleft(tmp20)
+                                            if 'i2.2' not in subst3 or cons_a2(n=subst3["i2.2"]):
+                                                pass
+                                                # State 2310
+                                                if len(subjects10) == 0:
+                                                    pass
+                                                    # State 2311
+                                                    if len(subjects2) >= 1:
+                                                        tmp22 = subjects2.popleft()
+                                                        subst4 = Substitution(subst3)
+                                                        try:
+                                                            subst4.try_add_variable('i2.1', tmp22)
+                                                        except ValueError:
+                                                            pass
+                                                        else:
+                                                            pass
+                                                            if 'i2.1' not in subst4 or 'i2.2' not in subst4 or cons_f4(n=subst4["i2.2"], x=subst4["i2.1"]):
+                                                                pass
+                                                                if 'i2.1' not in subst4 or 'i2.0' not in subst4 or cons_f3(b=subst4["i2.0"], x=subst4["i2.1"]):
+                                                                    pass
+                                                                    # State 2312
+                                                                    if len(subjects2) == 0:
+                                                                        pass
+                                                                        # State 2313
+                                                                        if len(subjects) == 0:
+                                                                            pass
+                                                                            tmp_subst = Substitution()
+                                                                            tmp_subst['x'] = subst4['i2.1']
+                                                                            tmp_subst['n'] = subst4['i2.2']
+                                                                            tmp_subst['b'] = subst4['i2.0']
+                                                                            # 1: Integral(b*x**n, x) /; (cons_f4) and (cons_f3) and (cons_a2)
+                                                                            yield replacement2, tmp_subst, [(cons_f4), (cons_f3), (cons_a2)]
+                                                        subjects2.appendleft(tmp22)
+                                    subjects10.appendleft(tmp18)
                     subjects10.appendleft(tmp11)
                 subjects2.appendleft(tmp9)
         subst1 = Substitution(subst0)
@@ -175,84 +245,84 @@ def match_root(subject):
             pass
         else:
             pass
-            # State 2325
+            # State 2328
             if len(subjects2) >= 1:
-                tmp21 = subjects2.popleft()
+                tmp25 = subjects2.popleft()
                 subst2 = Substitution(subst1)
                 try:
-                    subst2.try_add_variable('i2.0', tmp21)
+                    subst2.try_add_variable('i2.0', tmp25)
                 except ValueError:
                     pass
                 else:
                     pass
-                    if 'i2.0' not in subst2 or 'i2.0_1' not in subst2 or cons_f3(b=subst2["i2.0_1"], x=subst2["i2.0"]):
+                    if 'i2.0_1' not in subst2 or 'i2.0' not in subst2 or cons_f3(b=subst2["i2.0_1"], x=subst2["i2.0"]):
                         pass
-                        # State 2326
+                        # State 2329
                         if len(subjects2) >= 1:
-                            tmp23 = subjects2.popleft()
+                            tmp27 = subjects2.popleft()
                             subst3 = Substitution(subst2)
                             try:
-                                subst3.try_add_variable('i2.0', tmp23)
+                                subst3.try_add_variable('i2.0', tmp27)
                             except ValueError:
                                 pass
                             else:
                                 pass
-                                if 'i2.0' not in subst3 or 'i2.0_1' not in subst3 or cons_f3(b=subst3["i2.0_1"], x=subst3["i2.0"]):
+                                if 'i2.0_1' not in subst3 or 'i2.0' not in subst3 or cons_f3(b=subst3["i2.0_1"], x=subst3["i2.0"]):
                                     pass
-                                    # State 2327
+                                    # State 2330
                                     if len(subjects2) == 0:
                                         pass
-                                        # State 2328
+                                        # State 2331
                                         if len(subjects) == 0:
                                             pass
                                             tmp_subst = Substitution()
                                             tmp_subst['x'] = subst3['i2.0']
                                             tmp_subst['b'] = subst3['i2.0_1']
-                                            # 1: Integral(b*x, x) /; (cons_f3)
-                                            yield replacement2, tmp_subst, [(cons_f3)]
-                            subjects2.appendleft(tmp23)
-                subjects2.appendleft(tmp21)
+                                            # 2: Integral(b*x, x) /; (cons_f3)
+                                            yield replacement3, tmp_subst, [(cons_f3)]
+                            subjects2.appendleft(tmp27)
+                subjects2.appendleft(tmp25)
         if len(subjects2) >= 1 and isinstance(subjects2[0], Mul):
-            tmp25 = subjects2.popleft()
-            associative1 = tmp25
-            associative_type1 = type(tmp25)
-            subjects26 = deque(tmp25._args)
+            tmp29 = subjects2.popleft()
+            associative1 = tmp29
+            associative_type1 = type(tmp29)
+            subjects30 = deque(tmp29._args)
             matcher = CommutativeMatcher2315.get()
-            tmp27 = subjects26
-            subjects26 = []
-            for s in tmp27:
+            tmp31 = subjects30
+            subjects30 = []
+            for s in tmp31:
                 matcher.add_subject(s)
-            for pattern_index, subst1 in matcher.match(tmp27, subst0):
+            for pattern_index, subst1 in matcher.match(tmp31, subst0):
                 pass
                 if pattern_index == 0:
                     pass
-                    if 'i2.2' not in subst1 or 'i2.1' not in subst1 or cons_f4(n=subst1["i2.2"], x=subst1["i2.1"]):
+                    if 'i2.1' not in subst1 or 'i2.2' not in subst1 or cons_f4(n=subst1["i2.2"], x=subst1["i2.1"]):
                         pass
-                        if 'i2.0' not in subst1 or 'i2.1' not in subst1 or cons_f3(b=subst1["i2.0"], x=subst1["i2.1"]):
+                        if 'i2.1' not in subst1 or 'i2.0' not in subst1 or cons_f3(b=subst1["i2.0"], x=subst1["i2.1"]):
                             pass
                             if 'i2.2' not in subst1 or cons_a1(n=subst1["i2.2"]):
                                 pass
                                 # State 2322
                                 if len(subjects2) >= 1:
-                                    tmp28 = []
-                                    tmp28.append(subjects2.popleft())
+                                    tmp32 = []
+                                    tmp32.append(subjects2.popleft())
                                     while True:
-                                        if len(tmp28) > 1:
-                                            tmp29 = create_operation_expression(associative1, tmp28)
-                                        elif len(tmp28) == 1:
-                                            tmp29 = tmp28[0]
+                                        if len(tmp32) > 1:
+                                            tmp33 = create_operation_expression(associative1, tmp32)
+                                        elif len(tmp32) == 1:
+                                            tmp33 = tmp32[0]
                                         else:
                                             assert False, "Unreachable"
                                         subst2 = Substitution(subst1)
                                         try:
-                                            subst2.try_add_variable('i2.1', tmp29)
+                                            subst2.try_add_variable('i2.1', tmp33)
                                         except ValueError:
                                             pass
                                         else:
                                             pass
-                                            if 'i2.2' not in subst2 or 'i2.1' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
+                                            if 'i2.1' not in subst2 or 'i2.2' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
                                                 pass
-                                                if 'i2.0' not in subst2 or 'i2.1' not in subst2 or cons_f3(b=subst2["i2.0"], x=subst2["i2.1"]):
+                                                if 'i2.1' not in subst2 or 'i2.0' not in subst2 or cons_f3(b=subst2["i2.0"], x=subst2["i2.1"]):
                                                     pass
                                                     # State 2323
                                                     if len(subjects2) == 0:
@@ -268,48 +338,94 @@ def match_root(subject):
                                                             yield replacement1, tmp_subst, [(cons_f4), (cons_f3), (cons_a1)]
                                         if len(subjects2) == 0:
                                             break
-                                        tmp28.append(subjects2.popleft())
-                                    subjects2.extendleft(reversed(tmp28))
+                                        tmp32.append(subjects2.popleft())
+                                    subjects2.extendleft(reversed(tmp32))
                 if pattern_index == 1:
                     pass
-                    if 'i2.0' not in subst1 or 'i2.0_1' not in subst1 or cons_f3(b=subst1["i2.0_1"], x=subst1["i2.0"]):
+                    if 'i2.1' not in subst1 or 'i2.2' not in subst1 or cons_f4(n=subst1["i2.2"], x=subst1["i2.1"]):
                         pass
-                        # State 2329
+                        if 'i2.1' not in subst1 or 'i2.0' not in subst1 or cons_f3(b=subst1["i2.0"], x=subst1["i2.1"]):
+                            pass
+                            if 'i2.2' not in subst1 or cons_a2(n=subst1["i2.2"]):
+                                pass
+                                # State 2325
+                                if len(subjects2) >= 1:
+                                    tmp35 = []
+                                    tmp35.append(subjects2.popleft())
+                                    while True:
+                                        if len(tmp35) > 1:
+                                            tmp36 = create_operation_expression(associative1, tmp35)
+                                        elif len(tmp35) == 1:
+                                            tmp36 = tmp35[0]
+                                        else:
+                                            assert False, "Unreachable"
+                                        subst2 = Substitution(subst1)
+                                        try:
+                                            subst2.try_add_variable('i2.1', tmp36)
+                                        except ValueError:
+                                            pass
+                                        else:
+                                            pass
+                                            if 'i2.1' not in subst2 or 'i2.2' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
+                                                pass
+                                                if 'i2.1' not in subst2 or 'i2.0' not in subst2 or cons_f3(b=subst2["i2.0"], x=subst2["i2.1"]):
+                                                    pass
+                                                    # State 2326
+                                                    if len(subjects2) == 0:
+                                                        pass
+                                                        # State 2327
+                                                        if len(subjects) == 0:
+                                                            pass
+                                                            tmp_subst = Substitution()
+                                                            tmp_subst['x'] = subst2['i2.1']
+                                                            tmp_subst['n'] = subst2['i2.2']
+                                                            tmp_subst['b'] = subst2['i2.0']
+                                                            # 1: Integral(b*x**n, x) /; (cons_f4) and (cons_f3) and (cons_a2)
+                                                            yield replacement2, tmp_subst, [(cons_f4), (cons_f3), (cons_a2)]
+                                        if len(subjects2) == 0:
+                                            break
+                                        tmp35.append(subjects2.popleft())
+                                    subjects2.extendleft(reversed(tmp35))
+                if pattern_index == 2:
+                    pass
+                    if 'i2.0_1' not in subst1 or 'i2.0' not in subst1 or cons_f3(b=subst1["i2.0_1"], x=subst1["i2.0"]):
+                        pass
+                        # State 2332
                         if len(subjects2) >= 1:
-                            tmp31 = []
-                            tmp31.append(subjects2.popleft())
+                            tmp38 = []
+                            tmp38.append(subjects2.popleft())
                             while True:
-                                if len(tmp31) > 1:
-                                    tmp32 = create_operation_expression(associative1, tmp31)
-                                elif len(tmp31) == 1:
-                                    tmp32 = tmp31[0]
+                                if len(tmp38) > 1:
+                                    tmp39 = create_operation_expression(associative1, tmp38)
+                                elif len(tmp38) == 1:
+                                    tmp39 = tmp38[0]
                                 else:
                                     assert False, "Unreachable"
                                 subst2 = Substitution(subst1)
                                 try:
-                                    subst2.try_add_variable('i2.0', tmp32)
+                                    subst2.try_add_variable('i2.0', tmp39)
                                 except ValueError:
                                     pass
                                 else:
                                     pass
-                                    if 'i2.0' not in subst2 or 'i2.0_1' not in subst2 or cons_f3(b=subst2["i2.0_1"], x=subst2["i2.0"]):
+                                    if 'i2.0_1' not in subst2 or 'i2.0' not in subst2 or cons_f3(b=subst2["i2.0_1"], x=subst2["i2.0"]):
                                         pass
-                                        # State 2330
+                                        # State 2333
                                         if len(subjects2) == 0:
                                             pass
-                                            # State 2331
+                                            # State 2334
                                             if len(subjects) == 0:
                                                 pass
                                                 tmp_subst = Substitution()
                                                 tmp_subst['x'] = subst2['i2.0']
                                                 tmp_subst['b'] = subst2['i2.0_1']
-                                                # 1: Integral(b*x, x) /; (cons_f3)
-                                                yield replacement2, tmp_subst, [(cons_f3)]
+                                                # 2: Integral(b*x, x) /; (cons_f3)
+                                                yield replacement3, tmp_subst, [(cons_f3)]
                                 if len(subjects2) == 0:
                                     break
-                                tmp31.append(subjects2.popleft())
-                            subjects2.extendleft(reversed(tmp31))
-            subjects2.appendleft(tmp25)
+                                tmp38.append(subjects2.popleft())
+                            subjects2.extendleft(reversed(tmp38))
+            subjects2.appendleft(tmp29)
         subjects.appendleft(tmp1)
     return
     yield

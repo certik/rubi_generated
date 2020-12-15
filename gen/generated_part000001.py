@@ -16,7 +16,10 @@ class CommutativeMatcher2315(CommutativeMatcher):
     0: (0, Multiset({0: 1}), [
       (VariableWithCount('i2.0', 1, 1, S(1)), Mul)
 ]),
-    1: (1, Multiset({}), [
+    1: (1, Multiset({1: 1}), [
+      (VariableWithCount('i2.0', 1, 1, S(1)), Mul)
+]),
+    2: (2, Multiset({}), [
       (VariableWithCount('i2.0', 1, 1, None), Mul),
       (VariableWithCount('i2.0_1', 1, 1, S(1)), Mul)
 ])
@@ -59,15 +62,17 @@ class CommutativeMatcher2315(CommutativeMatcher):
                     pass
                 else:
                     pass
-                    if 'i2.2' not in subst2 or 'i2.1' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
+                    if 'i2.1' not in subst2 or 'i2.2' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
                         pass
-                        if 'i2.0' not in subst2 or 'i2.1' not in subst2 or cons_f3(b=subst2["i2.0"], x=subst2["i2.1"]):
+                        if 'i2.1' not in subst2 or 'i2.0' not in subst2 or cons_f3(b=subst2["i2.0"], x=subst2["i2.1"]):
                             pass
                             # State 2317
                             if len(subjects) == 0:
                                 pass
                                 # 0: x**n /; (cons_f4) and (cons_f3) and (cons_a1)
                                 yield 0, subst2
+                                # 1: x**n /; (cons_f4) and (cons_f3) and (cons_a2)
+                                yield 1, subst2
                 subjects.appendleft(tmp2)
         if len(subjects) >= 1 and isinstance(subjects[0], Pow):
             tmp4 = subjects.popleft()
@@ -82,9 +87,9 @@ class CommutativeMatcher2315(CommutativeMatcher):
                     pass
                 else:
                     pass
-                    if 'i2.2' not in subst1 or 'i2.1' not in subst1 or cons_f4(n=subst1["i2.2"], x=subst1["i2.1"]):
+                    if 'i2.1' not in subst1 or 'i2.2' not in subst1 or cons_f4(n=subst1["i2.2"], x=subst1["i2.1"]):
                         pass
-                        if 'i2.0' not in subst1 or 'i2.1' not in subst1 or cons_f3(b=subst1["i2.0"], x=subst1["i2.1"]):
+                        if 'i2.1' not in subst1 or 'i2.0' not in subst1 or cons_f3(b=subst1["i2.0"], x=subst1["i2.1"]):
                             pass
                             # State 2319
                             subst2 = Substitution(subst1)
@@ -94,7 +99,7 @@ class CommutativeMatcher2315(CommutativeMatcher):
                                 pass
                             else:
                                 pass
-                                if 'i2.2' not in subst2 or 'i2.1' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
+                                if 'i2.1' not in subst2 or 'i2.2' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
                                     pass
                                     if 'i2.2' not in subst2 or cons_a1(n=subst2["i2.2"]):
                                         pass
@@ -106,6 +111,16 @@ class CommutativeMatcher2315(CommutativeMatcher):
                                                 pass
                                                 # 0: x**n /; (cons_f4) and (cons_f3) and (cons_a1)
                                                 yield 0, subst2
+                                    if 'i2.2' not in subst2 or cons_a2(n=subst2["i2.2"]):
+                                        pass
+                                        # State 2320
+                                        if len(subjects5) == 0:
+                                            pass
+                                            # State 2321
+                                            if len(subjects) == 0:
+                                                pass
+                                                # 1: x**n /; (cons_f4) and (cons_f3) and (cons_a2)
+                                                yield 1, subst2
                             if len(subjects5) >= 1:
                                 tmp9 = subjects5.popleft()
                                 subst2 = Substitution(subst1)
@@ -115,7 +130,7 @@ class CommutativeMatcher2315(CommutativeMatcher):
                                     pass
                                 else:
                                     pass
-                                    if 'i2.2' not in subst2 or 'i2.1' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
+                                    if 'i2.1' not in subst2 or 'i2.2' not in subst2 or cons_f4(n=subst2["i2.2"], x=subst2["i2.1"]):
                                         pass
                                         if 'i2.2' not in subst2 or cons_a1(n=subst2["i2.2"]):
                                             pass
@@ -127,6 +142,16 @@ class CommutativeMatcher2315(CommutativeMatcher):
                                                     pass
                                                     # 0: x**n /; (cons_f4) and (cons_f3) and (cons_a1)
                                                     yield 0, subst2
+                                        if 'i2.2' not in subst2 or cons_a2(n=subst2["i2.2"]):
+                                            pass
+                                            # State 2320
+                                            if len(subjects5) == 0:
+                                                pass
+                                                # State 2321
+                                                if len(subjects) == 0:
+                                                    pass
+                                                    # 1: x**n /; (cons_f4) and (cons_f3) and (cons_a2)
+                                                    yield 1, subst2
                                 subjects5.appendleft(tmp9)
                 subjects5.appendleft(tmp6)
             subjects.appendleft(tmp4)
