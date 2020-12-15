@@ -1,4 +1,4 @@
-from generated_tempdir_2020_12_15_105745.generated_part000000 import match_root
+from gen.generated_part000000 import match_root
 from sympy import *
 from sympy.abc import x, a, b, c, d, m, n
 
