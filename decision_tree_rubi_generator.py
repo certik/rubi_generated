@@ -257,7 +257,7 @@ def generate_code():
     rubi = r[0]
     print("done")
 
-    tempdir = "generated_tempdir_{0}".format(datetime.now().strftime("%Y_%m_%d_%H%M%S"))
+    tempdir = "gen"
     os.mkdir(tempdir)
     os.system(os.path.join(tempdir, "__init__.py"))
     tempfile = "{0}/generated_part{{0:06}}.py".format(tempdir)
